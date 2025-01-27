@@ -33,6 +33,14 @@ const Calculator = () => {
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
         color: isDarkMode ? "white" : "black",
       };
+
+      const wrapperStyle = {
+        backgroundColor: isDarkMode ? "#000" : "#fff",
+        color: isDarkMode ? "#fff" : "#000",
+        minHeight: "100vh",
+        transition: "background-color 0.3s, color 0.3s",
+      };
+      
       
       const inputStyle = {
         gridColumn: "span 4",
@@ -66,7 +74,7 @@ const Calculator = () => {
       
       
   return (
-    <div>
+    <div style={wrapperStyle}>
         <button
             style={{
             ...buttonStyle,
